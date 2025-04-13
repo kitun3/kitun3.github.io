@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>きつねちゃんのホームページ</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=5" />
+    <link rel="stylesheet" href="assets/css/snow.css?v=5" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <script src="assets/js/theme.js?v=5" defer></script>
+    <script src="assets/js/language.js?v=5" defer></script>
+    <script src="assets/js/notifications.js?v=5" defer></script>
+    <script src="assets/js/snow.js?v=5" defer></script>
+  </head>
+  <body>
+    <div class="theme-switch">
+      <button id="theme-toggle" aria-label="テーマ切り替え">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <header>
+      <div class="language-switch">
+        <button onclick="changeLanguage('ja')">日本語</button>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('zh')">中文</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="fox-animation">
+          <img src="assets/images/kitsun3.png" alt="きつねちゃん" class="fox" />
+        </div>
+        <h1>きつねちゃん</h1>
+        <p class="subtitle">きつねのかわいいホームページ</p>
+      </section>
+
+      <section class="about">
+        <h2>好きなもの</h2>
+        <div class="favorites">
+          <div class="favorite-item">
+            <i class="fas fa-cookie"></i>
+            <p>栗饅頭</p>
+          </div>
+          <div class="favorite-item">
+            <i class="fas fa-mug-hot"></i>
+            <p>緑茶</p>
+          </div>
+          <div class="favorite-item">
+            <i class="fas fa-home"></i>
+            <p>畳</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:kitunechan3@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/kitun3" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://discord.com/users/kitune3" class="contact-item">
+            <i class="fab fa-discord"></i>
+            <span>Discord</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 きつねちゃん. MIT License</p>
+    </footer>
+
+    <div id="notification" class="notification">
+      <p id="notification-text"></p>
+    </div>
+  </body>
+</html>

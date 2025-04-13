@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #ff6b35;
+  --secondary-color: #f7c59f;
+  --background-light: #ffffff;
+  --text-light: #333333;
+  --background-dark: #1a1a1a;
+  --text-dark: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+}
+
+[data-theme='light'] {
+  --background: var(--background-light);
+  --text: var(--text-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+  transform: rotate(30deg);
+}
+
+.language-switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.language-switch button {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.language-switch button:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.fox-animation {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+.fox {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.favorites {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.favorite-item {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.favorite-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-item:active {
+  transform: scale(0.95);
+}
+
+.favorite-item i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s;
+}
+
+.contact-item:hover {
+  transform: scale(1.1);
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--secondary-color);
+  color: var(--text);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  max-width: 80%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notification.show {
+  top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification.hide {
+  top: -100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notification p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
